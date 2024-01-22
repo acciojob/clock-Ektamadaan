@@ -10,21 +10,15 @@
 	<!-- the entire body must be written by student -->
 	<p id="timer"></p>
     <script type="text/javascript" src="./script.js">
+		
 		function updateTimer() {
-  // Get the current date and time
-  var currentDateTime = new Date();
+			var currentDateTime = new Date();
+			var formattedDateTime = currentDateTime.toLocaleString();
+		    document.getElementById('timer').textContent = formattedDateTime;
+		}
 
-  // Format the date and time
-  var formattedDateTime = currentDateTime.toLocaleString();
-
-  // Display the formatted date and time on the webpage
-  document.getElementById('timer').textContent = formattedDateTime;
-}
-
-// Update the timer every second
 setInterval(updateTimer, 1000);
 
-// Initial update
 updateTimer();
 </script>
 
